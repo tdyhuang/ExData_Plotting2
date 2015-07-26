@@ -22,7 +22,6 @@ Los$id="los"
 ## rbind two dataframes to compare with plot
 BA=rbind(Bal,Los)
 ## Make the compare plot with ggplot
-ggplot(BA,aes(id,Emissions))+geom_bar(stat="identity",aes(fill=id))+facet_grid(.~year)
-+labs(title="Emissions of motor Vehicle in Baltimore and LA")+labs(x="Area")
+ggplot(BA,aes(id,Emissions))+geom_bar(stat="identity",aes(fill=id))+facet_grid(.~year)+labs(title="Emissions of motor Vehicle in Baltimore and LA")+labs(x="Area")
 dev.copy(png,"plot6.png")
 dev.off()
